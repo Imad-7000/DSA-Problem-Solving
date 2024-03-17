@@ -16,10 +16,13 @@ public class ValidNumbers {
         
         boolean isPointFound = false;
 
-        if(s.charAt(0) == '.')
-            isPointFound = true;
+        if(s.charAt(0) == '.'){
+            if(s.length() > 1)
+                isPointFound = true;
+            else
+                return false;
+        }
 
-        boolean isNumber = true;
         for(int i = 1; i < s.length(); i++){
             if(Character.isDigit(s.charAt(i)))
                 continue;
@@ -27,8 +30,11 @@ public class ValidNumbers {
                 if(isPointFound)
                     return false;
                 isPointFound = true;
+
             }
             else if(s.charAt(i) == 'e' || s.charAt(i) == 'E'){
+                if(s.charAt( i-1) == '.')
+                    return false;
                 i++;
                 if(i == s.length())
                     return false;
@@ -47,6 +53,6 @@ public class ValidNumbers {
                 return false;
             
         }
-        return isNumber;
+        return true;
     }
 }
