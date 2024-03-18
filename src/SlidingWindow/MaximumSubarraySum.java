@@ -39,7 +39,6 @@ public class MaximumSubarraySum {
         long answer = 0;
         int i = 0; 
         HashSet<Integer> seen = new HashSet<>();
-        System.out.println("YOLO");
         int temp = 0;
         int j = 0;
         while (i <= nums.length - k) {
@@ -61,6 +60,38 @@ public class MaximumSubarraySum {
             i++;
         }
 
+        return answer;
+    }
+
+    public static long maximumSubarraySumv3(int[] nums, int k){
+        HashSet<Integer> hash = new HashSet<>();
+        long answer = 0;
+        long temp = 0;
+
+        int i = 0; 
+        int j = 0;
+
+        while (j < nums.length) {
+            if(!hash.contains(nums[j])){
+                hash.add(nums[j]);
+                temp += nums[j];
+                j++;
+
+                while (hash.size() > k) {
+                    hash.remove(nums[i]);
+                    temp -= nums[i];
+                    i++;
+                }
+
+                if(hash.size() == k)
+                    answer = Math.max(answer, temp);
+            }
+            else{
+                hash.remove(nums[i]);
+                temp -= nums[i];
+                i++;
+            }
+        }
         return answer;
     }
 }

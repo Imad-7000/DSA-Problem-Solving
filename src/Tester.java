@@ -11,6 +11,6 @@ public class Tester {
             nums1[i] = i + 1;
         }
        int[] nums = new int[]{1,5,4,2,9,9,9};
-       System.out.println(MaximumSubarraySum.maximumSubarraySumv2(nums1, 10000));
+       System.out.println(MaximumSubarraySum.maximumSubarraySumv3(nums1, 10000));
     }
 }
