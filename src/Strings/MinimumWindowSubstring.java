@@ -1,6 +1,9 @@
 /*
  * 76. Minimum Window substring
  * https://leetcode.com/problems/minimum-window-substring/description/
+ * 
+ * 
+ * TODO
  */
 
 package Strings;
@@ -11,9 +14,11 @@ import java.util.HashSet;
 public class MinimumWindowSubstring {
     
     public static String minimumWindowSubstring(String s, String t){
-        HashSet<Character> hash = new HashSet<>();
-        for(int i = 0; i < t.length(); i++)
-            hash.add(t.charAt(i));
+        HashMap<Character, Integer> hash = new HashMap<>();
+        for(int i = 0; i < t.length(); i++){
+            int count = hash.getOrDefault(s.charAt(i), 0) + 1;
+            hash.put(s.charAt(i), count);
+        }
         
         String mString = "";
 
@@ -22,11 +27,12 @@ public class MinimumWindowSubstring {
         int j = 0;
 
         while(j < s.length()){
-            if(hash.contains(s.charAt(j))){
+            if(hash.containsKey(s.charAt(j))){
+
                 int count = seen.getOrDefault(s.charAt(j), 0) + 1;
                 seen.put(s.charAt(j), count);
 
-                if(hash.size() == seen.size()){
+                if(hash.equals(seen)){
                     if(mString == "")
                         mString = s.substring(i, j+1);
                     else{
@@ -43,7 +49,7 @@ public class MinimumWindowSubstring {
                         }
                         i++;
                     }
-                    while(!hash.contains(s.charAt(i)))
+                    while(!hash.containsKey(s.charAt(i)))
                         i++;
                 }
             }
