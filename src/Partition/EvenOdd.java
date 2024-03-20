@@ -1,3 +1,4 @@
+package Partition;
 import java.util.Arrays;
 
 public class EvenOdd {
