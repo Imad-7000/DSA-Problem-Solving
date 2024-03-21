@@ -1,3 +1,4 @@
+package Arrays;
 //Given an array of integers nums and an integer k, write a program to return the number of unique k-diff pairs in the array.
 //        A k-diff pair is defined as an integer pair (nums[i], nums[j]), where the following conditions are true:
 //

@@ -1,3 +1,10 @@
+package Arrays;
+/*
+ * 
+ * Swap the ith element in such a way that the last element of both arrays are maximum.
+ * If possible, Print "YES" else Print "NO"
+ */
+
 public class MaxSwap {
 
     public static void main(String[] args) {

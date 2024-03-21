@@ -1,3 +1,4 @@
+package AdHOC;
 public class MangoesAndPineapples {
 
     public static void main(String[] args) {

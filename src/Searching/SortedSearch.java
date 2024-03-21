@@ -1,3 +1,4 @@
+package Searching;
 import java.util.ArrayList;
 
 public class SortedSearch {

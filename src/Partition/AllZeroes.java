@@ -1,3 +1,10 @@
+package Partition;
+/*
+ * 
+ * Given an array, move all zeros to the beginning if the array
+ */
+
+
 public class AllZeroes {
     public static void main(String[] args) {
         int[] arr = new int[]{1, 23, 2, 0, 0, 0, 12, 0, 3, 7, 0, 5, 3, 2, 0, 0, 1, 0};

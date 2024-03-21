@@ -1,3 +1,4 @@
+package Arrays;
 //In the lively town of Main Street, two HeyCoach students, Ram and Shyam, embarked on an intriguing challenge
 //Tasked by their mentor, they ventured onto a straight road lined with an even number of buildings
 //Each building held a stash of gold coins, but here's the twist – certain buildings were occupied by cunning thieves
