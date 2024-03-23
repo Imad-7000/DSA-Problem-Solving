@@ -1,0 +1,245 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "MangoesAndPineapples",
+            "request": "launch",
+            "mainClass": "AdHOC.MangoesAndPineapples",
+            "projectName": "DSA-Problem-Solving_d2828557"
+        },
+        {
+            "type": "java",
+            "name": "RomanToInteger",
+            "request": "launch",
+            "mainClass": "AdHOC.RomanToInteger",
+            "projectName": "DSA-Problem-Solving_d2828557"
+        },
+        {
+            "type": "java",
+            "name": "Temp",
+            "request": "launch",
+            "mainClass": "AdHOC.Temp",
+            "projectName": "DSA-Problem-Solving_d2828557"
+        },
+        {
+            "type": "java",
+            "name": "CombineBooks",
+            "request": "launch",
+            "mainClass": "Arrays.CombineBooks",
+            "projectName": "DSA-Problem-Solving_d2828557"
+        },
+        {
+            "type": "java",
+            "name": "Foodie",
+            "request": "launch",
+            "mainClass": "Arrays.Foodie",
+            "projectName": "DSA-Problem-Solving_d2828557"
+        },
+        {
+            "type": "java",
+            "name": "GFG",
+            "request": "launch",
+            "mainClass": "Arrays.GFG",
+            "projectName": "DSA-Problem-Solving_d2828557"
+        },
+        {
+            "type": "java",
+            "name": "MaxSwap",
+            "request": "launch",
+            "mainClass": "Arrays.MaxSwap",
+            "projectName": "DSA-Problem-Solving_d2828557"
+        },
+        {
+            "type": "java",
+            "name": "MaximiseCoin",
+            "request": "launch",
+            "mainClass": "Arrays.MaximiseCoin",
+            "projectName": "DSA-Problem-Solving_d2828557"
+        },
+        {
+            "type": "java",
+            "name": "ReverseArray",
+            "request": "launch",
+            "mainClass": "Arrays.ReverseArray",
+            "projectName": "DSA-Problem-Solving_d2828557"
+        },
+        {
+            "type": "java",
+            "name": "TwoSum",
+            "request": "launch",
+            "mainClass": "Arrays.TwoSum",
+            "projectName": "DSA-Problem-Solving_d2828557"
+        },
+        {
+            "type": "java",
+            "name": "TwoSumAgain",
+            "request": "launch",
+            "mainClass": "Arrays.TwoSumAgain",
+            "projectName": "DSA-Problem-Solving_d2828557"
+        },
+        {
+            "type": "java",
+            "name": "XOR",
+            "request": "launch",
+            "mainClass": "HashSet.XOR",
+            "projectName": "DSA-Problem-Solving_d2828557"
+        },
+        {
+            "type": "java",
+            "name": "LongestPalindromSubstring",
+            "request": "launch",
+            "mainClass": "LongestPalindromSubstring",
+            "projectName": "DSA-Problem-Solving_d2828557"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "DSA-Problem-Solving_d2828557"
+        },
+        {
+            "type": "java",
+            "name": "MaxFreqSum",
+            "request": "launch",
+            "mainClass": "MaxFreqSum",
+            "projectName": "DSA-Problem-Solving_d2828557"
+        },
+        {
+            "type": "java",
+            "name": "AllZeroes",
+            "request": "launch",
+            "mainClass": "Partition.AllZeroes",
+            "projectName": "DSA-Problem-Solving_d2828557"
+        },
+        {
+            "type": "java",
+            "name": "AlternativePositiveNegative",
+            "request": "launch",
+            "mainClass": "Partition.AlternativePositiveNegative",
+            "projectName": "DSA-Problem-Solving_d2828557"
+        },
+        {
+            "type": "java",
+            "name": "DigitsvsSymbols",
+            "request": "launch",
+            "mainClass": "Partition.DigitsvsSymbols",
+            "projectName": "DSA-Problem-Solving_d2828557"
+        },
+        {
+            "type": "java",
+            "name": "DutchFlagProblem",
+            "request": "launch",
+            "mainClass": "Partition.DutchFlagProblem",
+            "projectName": "DSA-Problem-Solving_d2828557"
+        },
+        {
+            "type": "java",
+            "name": "EvenOdd",
+            "request": "launch",
+            "mainClass": "Partition.EvenOdd",
+            "projectName": "DSA-Problem-Solving_d2828557"
+        },
+        {
+            "type": "java",
+            "name": "PartitionNumbersAndSymbols",
+            "request": "launch",
+            "mainClass": "Partition.PartitionNumbersAndSymbols",
+            "projectName": "DSA-Problem-Solving_d2828557"
+        },
+        {
+            "type": "java",
+            "name": "GCDOfSmallest",
+            "request": "launch",
+            "mainClass": "PriorityQueue.GCDOfSmallest",
+            "projectName": "DSA-Problem-Solving_d2828557"
+        },
+        {
+            "type": "java",
+            "name": "SortedSearch",
+            "request": "launch",
+            "mainClass": "Searching.SortedSearch",
+            "projectName": "DSA-Problem-Solving_d2828557"
+        },
+        {
+            "type": "java",
+            "name": "searchRotated",
+            "request": "launch",
+            "mainClass": "Searching.searchRotated",
+            "projectName": "DSA-Problem-Solving_d2828557"
+        },
+        {
+            "type": "java",
+            "name": "FrequencySort",
+            "request": "launch",
+            "mainClass": "Sorting.FrequencySort",
+            "projectName": "DSA-Problem-Solving_d2828557"
+        },
+        {
+            "type": "java",
+            "name": "JeeRanking",
+            "request": "launch",
+            "mainClass": "Sorting.JeeRanking",
+            "projectName": "DSA-Problem-Solving_d2828557"
+        },
+        {
+            "type": "java",
+            "name": "MaxFreqencyElement",
+            "request": "launch",
+            "mainClass": "Sorting.MaxFreqencyElement",
+            "projectName": "DSA-Problem-Solving_d2828557"
+        },
+        {
+            "type": "java",
+            "name": "Sort",
+            "request": "launch",
+            "mainClass": "Sorting.Sort",
+            "projectName": "DSA-Problem-Solving_d2828557"
+        },
+        {
+            "type": "java",
+            "name": "SortRhymingWords",
+            "request": "launch",
+            "mainClass": "Sorting.SortRhymingWords",
+            "projectName": "DSA-Problem-Solving_d2828557"
+        },
+        {
+            "type": "java",
+            "name": "LongestSubstringWithoutRepeatingCharacters",
+            "request": "launch",
+            "mainClass": "Strings.TwoPointer.LongestSubstringWithoutRepeatingCharacters",
+            "projectName": "DSA-Problem-Solving_d2828557"
+        },
+        {
+            "type": "java",
+            "name": "SweepersProblem",
+            "request": "launch",
+            "mainClass": "SweepersProblem",
+            "projectName": "DSA-Problem-Solving_d2828557"
+        },
+        {
+            "type": "java",
+            "name": "Tester",
+            "request": "launch",
+            "mainClass": "Tester",
+            "projectName": "DSA-Problem-Solving_d2828557"
+        },
+        {
+            "type": "java",
+            "name": "VacationDates",
+            "request": "launch",
+            "mainClass": "VacationDates",
+            "projectName": "DSA-Problem-Solving_d2828557"
+        }
+    ]
+}
