@@ -65,22 +65,23 @@ public class Sandwiches {
         int i = 0;
         int j = 0;
 
-        while (i < students.size()) {
+        while (students.size() != 0 && count != students.size()) {
             if(students.get(i) == sandwiches.get(j)){
-                count++;
+                count = 0;
+                students.remove(i);
                 i++;
                 j++;
                 
             }
 
             else{
-                int temp = students.get(i);
+                int temp = students.remove(i);
                 students.add(temp);
-                i++;
+                count++;
             }
         }
 
-        return students.size() - count;
+        return students.size();
      }
 
 }

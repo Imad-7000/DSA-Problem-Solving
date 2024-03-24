@@ -1,12 +1,6 @@
-import Strings.*;
-import SlidingWindow.*;
-
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-
-import HashSet.FirstUniqueCharacter;
-import HeyCoach.SessionTest.*;
+import Stacks.*;
 public class Tester {
 
     public static void main(String[] args) { 
@@ -26,8 +20,8 @@ public class Tester {
         sandwich.add(1);
         sandwich.add(1);
 
-        System.out.println(Sandwiches.countStudents(students, sandwich));
-        
+        String infix = "3+4*5+(2+3)/5";
+        System.out.println(EvaluateExpression.evaluate(infix));
 
     }
 }
