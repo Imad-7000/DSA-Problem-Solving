@@ -16,10 +16,12 @@ public class InfixToPostFix {
 
     //Checks and returns priority of operator to shuffle stack
     public static int priority(char ch){
-        if(ch == '+' || ch == '-')
+        if(ch == '+')
             return 1;
-        else if(ch == '*')
+        else if(ch == '-')
             return 2;
+        else if(ch == '*' || ch =='/')
+            return 3;
         else
             return 0;
     }
