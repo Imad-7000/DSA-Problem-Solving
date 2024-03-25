@@ -16,11 +16,17 @@ public class NextGreaterElement {
         int[] answer = new int[array.length];
         Stack<Integer> stack = new Stack<>();
 
+
+        //Calculating in reverse order 
         for(int i = array.length - 1; i >=0 ; i--){
+
+            //If stack is empty just put answer as -1 and push to stack current value
             if(stack.isEmpty()){
                 answer[i] = -1;
                 stack.push(array[i]);
             }
+
+            //if not empty, pop until a amx elemen is found, then push current to stack
             else{
                 while( !stack.isEmpty() && stack.peek() <= array[i]){
                     stack.pop();
