@@ -29,16 +29,18 @@ Constraints:
 package SlidingWindow;
 
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.PriorityQueue;
 
 public class FirstNegativeElement {
 
     public static void printFirstNegativeInteger(ArrayList<Integer> arr, int k) {
 
+
+        //iterate to i - k 
         int i = 0;
         while (i <= arr.size() - k) {
-            int j = i;
+            int j = i; // j = i to start a new window every time
+
+            //if any element found as negative, print break and move to next window
             while(j < k + i ){
                 if(arr.get(j) < 0){
                     System.out.print(arr.get(j) + " ");
@@ -46,6 +48,8 @@ public class FirstNegativeElement {
                 }
                 j++;
             }
+
+            //if no negative elemnt, print 0;
             if(j == k + i)
                 System.out.print("0" + " ");
             i++;
