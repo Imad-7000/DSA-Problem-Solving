@@ -66,19 +66,27 @@ public class NQueens {
             return true;
         }
 
+        //intialise to false
         boolean is_valid = false;
 
+        //check if there is any cell in current column that satisfies the coondition
         for(int i = 0; i < board.length; i++){
 
+            //if this position is safe, we'll check future positions wrt to this position
             if(is_safe(i, col, board)){
                 board[i][col] = 1;
+
+                //checking future positions.. if perfect answer is found, return true;
                 if(nQueens(col + 1, board)){
                     is_valid = true;
                     return true;
                 }
+
+                //if it comes out of the if, obviously this pos is not correct, so make it 0 and try next
                 board[i][col] = 0;
             }
         }
+        //return final answer 
         return is_valid;
     }
 }
