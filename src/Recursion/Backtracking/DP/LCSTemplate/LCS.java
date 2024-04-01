@@ -32,10 +32,12 @@ public class LCS {
 
     public static String longest(String s1, String s2, int m, int n, int[][] memo){
         StringBuilder str = new StringBuilder();
-        while (m >= 0 || n >=0 ) {
+        while (m > 0 || n >0 ) {
             if(s1.charAt(m) == s2.charAt(n)){
-                m--;
-                n--;
+                if(m!=0)
+                    m--;
+                if(n!=0)
+                    n--;
                 str.append(s1.charAt(m));
             }
             else{

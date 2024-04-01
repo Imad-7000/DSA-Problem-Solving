@@ -10,6 +10,6 @@ public class Tester {
 
         System.out.println(Recursion.Backtracking.DP.LCS.lcs(6, 7, "aggtab", "gtxxayb", memo));
 
-        System.out.println(Recursion.Backtracking.DP.LCS.longest("aggtab","gtxxayb",5,6,memo));
+        System.out.println(Recursion.Backtracking.DP.LCS.longest("aggtab","gtxxayb",6,7,memo));
     }
 }
