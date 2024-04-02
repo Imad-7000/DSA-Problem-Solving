@@ -1,5 +1,7 @@
 /*
- * 
+ *1754. Largest merge of two strings
+ * https://leetcode.com/problems/largest-merge-of-two-strings/description/
+ *  
  * You are given two strings word1 and word2. You want to construct a string merge in the following way: while either
  *  word1 or word2 are non-empty, choose one of the following options:
 
@@ -64,17 +66,17 @@ public class LargestMerge {
         }
 
 
-        // //if word1 char is bigger add that
-        // if(word1.charAt(m) > word2.charAt(n)){
-        //     finalAns += word1.charAt(m);
-        //     return largestMergehelp(word1, word2, m + 1, n, finalAns);
-        // }
+        //if word1 char is bigger add that
+        if(word1.charAt(m) > word2.charAt(n)){
+            finalAns += word1.charAt(m);
+            return largestMergehelp(word1, word2, m + 1, n, finalAns);
+        }
 
-        // //if word2 char is bigger add that
-        // else if(word2.charAt(n) > word1.charAt(m)){
-        //     finalAns += word2.charAt(n);
-        //     return largestMergehelp(word1, word2, m , n + 1, finalAns);
-        // }
+        //if word2 char is bigger add that
+        else if(word2.charAt(n) > word1.charAt(m)){
+            finalAns += word2.charAt(n);
+            return largestMergehelp(word1, word2, m , n + 1, finalAns);
+        }
 
         //if same, compare lexicographically bigger word of the remaining substring and add that char
         else{
