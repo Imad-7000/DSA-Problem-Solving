@@ -1,7 +1,7 @@
 package Partition;
 /*
  * 
- * Given an array, move all zeros to the beginning if the array
+ * Given an array, move all zeros to the beginning of the array
  */
 
 
