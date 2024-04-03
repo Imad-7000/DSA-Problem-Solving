@@ -9,7 +9,7 @@
  * Variant 1
  */
 
-package Recursion.Backtracking.DP.LCSTemplate;
+package Recursion.DP.LCSTemplate;
 
 public class LCS {
 
