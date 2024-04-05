@@ -1,0 +1,12 @@
+General Knapsackk Template
+
+
+
+func args(arg1, arg2, memo[][], arr){
+    if(either arg1 or arg2 == 0)
+        return 0
+    if(memo[][] != -1)
+        return memo[][]
+    ans = 0
+    
+}

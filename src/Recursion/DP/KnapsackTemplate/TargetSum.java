@@ -40,26 +40,18 @@ package Recursion.DP.KnapsackTemplate;
 public class TargetSum {
 
     public static int findTargetSumWays(int[] nums, int target){
-        int count = 0;
-        int sum = 0;
-        for(int i =0;i < nums.length; i++)
-            sum += nums[i];
-        count = helper(nums, 1, target,  sum - nums[0],nums[0]);
-        return count;
+       return helper(nums, nums.length - 1, target);
     }
 
-    public static int helper(int[] nums, int i, int target, int posSum, int negSum){
-        if(i == nums.length)
+    //There can only be 2 cases, where an element is positive or negative and adding and subtracting the element from target and checking if any case at the end
+    //target becomes 0;
+    public static int helper(int[] nums, int i, int target){
+       if(i == -1){
+            if(target == 0)
+                return 1;
             return 0;
-        
-        if(Math.abs(posSum - negSum) == target){
-            return 1;
-        }
-        
-        else{
-           return helper(nums, i + 1, target, posSum - nums[i], negSum + nums[i]) + helper(nums, i + 1, target, posSum, negSum);
-            
-        }
-    }
+       }
 
+       return helper(nums, i - 1, target + nums[i]) + helper(nums, i - 1, target - nums[i]);
+    }
 }
