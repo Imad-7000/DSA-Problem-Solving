@@ -1,9 +1,9 @@
 /*
  * 
  * 
- * LEAST COMMON SUBSTRING
+ * LEAST COMMON SUBSEQUENCE
  * 
- * given two substrings, return the least common substring 
+ * given two Strings, return the least common subsequence
  * 
  * Sol: 
  * 
