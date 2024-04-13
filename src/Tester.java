@@ -21,6 +21,10 @@ public class Tester {
         int[] endTime = new int[]{3,4,5,6};
         int[] profit = new int[]{50,10,40,70};
 
-        System.out.println(Recursion.DP.MaximumProfitJobScheduling.jobScheduling(startTime, endTime, profit));
+      //  System.out.println(Recursion.DP.MaximumProfitJobScheduling.jobScheduling(startTime, endTime, profit));
+
+        String s1 = "Imaduddin";
+        String s2 = "uddingImad";
+        System.out.println(Recursion.DP.LCSTemplate.LongestCommonSubstring.lcs(s1, s2));
     }
 }
