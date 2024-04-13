@@ -68,8 +68,8 @@ public class LCS {
     }
 
     //this function prints the lcs. To understand the code, the intuition of tabulation is important.
-    //From table we see that, if chars at m and n match, we move diagnolly, i.e. m-1,n-1, else we move left, n-- ,
-    //if no n remains, we go upwards, m--. till we reach zero box
+    //From table we see that, if chars at m and n match, we move diagnolly, i.e. m-1,n-1, else we move in direction which has
+    //      higher value
     public static String longest(String s1, String s2, int m, int n){
         StringBuilder str = new StringBuilder();
         while (m > 0 && n >0 ) {
