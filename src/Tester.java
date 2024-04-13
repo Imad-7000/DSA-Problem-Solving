@@ -23,8 +23,10 @@ public class Tester {
 
       //  System.out.println(Recursion.DP.MaximumProfitJobScheduling.jobScheduling(startTime, endTime, profit));
 
-        String s1 = "Imaduddin";
-        String s2 = "uddingImad";
-        System.out.println(Recursion.DP.LCSTemplate.LongestCommonSubstring.lcs(s1, s2));
+        String s1 = "abac";
+        String s2 = "cab";
+
+        Recursion.DP.LCSTemplate.LCS.lcsMain(s1, s2);
+        //System.out.println(Recursion.DP.LCSTemplate.LongestCommonSubstring.lcs(s1, s2));
     }
 }
