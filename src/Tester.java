@@ -1,3 +1,4 @@
+import LinkedList.ReverseLinkedList;
 
 public class Tester {
 
@@ -20,12 +21,15 @@ public class Tester {
 
       //  System.out.println(Recursion.DP.MaximumProfitJobScheduling.jobScheduling(startTime, endTime, profit));
 
-        String s1 = "abac";
-        String s2 = "cab";
+        // String s1 = "abac";
+        // String s2 = "cab";
         
-        String val = Recursion.DP.LCSTemplate.ShortestCommonSuperSequence.shortestCommonSupersequence(s1, s2);
-        System.out.println(val);
+        // String val = Recursion.DP.LCSTemplate.ShortestCommonSuperSequence.shortestCommonSupersequence(s1, s2);
+        // System.out.println(val);
         //Recursion.DP.LCSTemplate.LCS.lcsMain(s1, s2);
         //System.out.println(Recursion.DP.LCSTemplate.LongestCommonSubstring.lcs(s1, s2));
+
+        int val = 4 %3;
+        System.out.println(val);
     }
 }
