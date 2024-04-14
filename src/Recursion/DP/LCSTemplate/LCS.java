@@ -30,7 +30,7 @@ package Recursion.DP.LCSTemplate;
 public class LCS {
 
     private static int[][] memo;
-    public static void lcsMain(String s1, String s2){
+    public static String lcsMain(String s1, String s2){
         memo = new int[s1.length() + 1][s2.length() + 1];
         for(int i = 0 ; i < memo.length; i++)
             for(int j = 0 ; j < memo[i].length; j++){
@@ -42,7 +42,7 @@ public class LCS {
 
         System.out.println(lcs(s1.length(), s2.length(), s1, s2));
         System.out.println();
-        System.out.println(longest(s1, s2, s1.length(), s2.length()));
+        return longest(s1, s2, s1.length(), s2.length());
     }
     //This function finds teh length of LCS
     public static int lcs(int m, int n, String s1, String s2){

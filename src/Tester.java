@@ -25,8 +25,10 @@ public class Tester {
 
         String s1 = "abac";
         String s2 = "cab";
-
-        Recursion.DP.LCSTemplate.LCS.lcsMain(s1, s2);
+        
+        String val = Recursion.DP.LCSTemplate.ShortestCommonSuperSequence.shortestCommonSupersequence(s1, s2);
+        System.out.println(val);
+        //Recursion.DP.LCSTemplate.LCS.lcsMain(s1, s2);
         //System.out.println(Recursion.DP.LCSTemplate.LongestCommonSubstring.lcs(s1, s2));
     }
 }
