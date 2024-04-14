@@ -45,7 +45,6 @@ public class ShortestCommonSuperSequence {
 
     static int[][] memo;
     public static String shortestCommonSupersequence(String s1, String s2) {
-        String bigString = s1 + s2;
         memo = new int[s1.length() + 1][s2.length() + 1];
         for(int i = 0 ; i < memo.length; i++)
             for(int j = 0 ; j < memo[i].length; j++){
