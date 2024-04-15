@@ -30,6 +30,10 @@ public class Tester {
         //System.out.println(Recursion.DP.LCSTemplate.LongestCommonSubstring.lcs(s1, s2));
 
         int val = 4 %3;
-        System.out.println(val);
+      //  System.out.println(val);
+
+        int[][] memo = new int[5][5];
+
+        System.out.println(memo[2][3]);
     }
 }
