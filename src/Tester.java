@@ -1,4 +1,5 @@
 import LinkedList.ReverseLinkedList;
+import Recursion.DP.KnapsackTemplate.BestTimeToBuyAndSell;
 
 public class Tester {
 
@@ -29,11 +30,7 @@ public class Tester {
         //Recursion.DP.LCSTemplate.LCS.lcsMain(s1, s2);
         //System.out.println(Recursion.DP.LCSTemplate.LongestCommonSubstring.lcs(s1, s2));
 
-        int val = 4 %3;
-      //  System.out.println(val);
-
-        int[][] memo = new int[5][5];
-
-        System.out.println(memo[2][3]);
+        int[] arr = new int[]{7,1,5,3,6,4};
+        System.out.println(BestTimeToBuyAndSell.maxProfit(arr));
     }
 }
