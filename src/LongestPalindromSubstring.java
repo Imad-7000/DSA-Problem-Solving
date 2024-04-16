@@ -1,27 +1,24 @@
 /*
 *   5. Longest Palindromic Substring
-    https://leetcode.com/problems/longest-palindromic-substring/description/
+*   https://leetcode.com/problems/longest-palindromic-substring/description/
 * 
-* You are given an array prices where prices[i] is the price of a given stock on the ith day.
-* You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
-* Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
-*   Example 1:
+*   Given a string s, return the longest palindromic substring in s.
 
-    Input: prices = [7,1,5,3,6,4]
-    Output: 5
-    Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
-    Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
+    Example 1:
+
+    Input: s = "babad"
+    Output: "bab"
+    Explanation: "aba" is also a valid answer.
     Example 2:
 
-    Input: prices = [7,6,4,3,1]
-    Output: 0
-    Explanation: In this case, no transactions are done and the max profit = 0.
+    Input: s = "cbbd"
+    Output: "bb"
  
 
     Constraints:
 
-    1 <= prices.length <= 105
-    0 <= prices[i] <= 104
+    1 <= s.length <= 1000
+    s consist of only digits and English letters.
  *  
  * 
  *  INTUITION = for every index, check with two pointers for Palindrome
@@ -30,7 +27,8 @@
 
 public class LongestPalindromSubstring {
     public static void main(String[] args) {
-
+        String str = "";
+        System.out.println(longestPalindrome(str));
     }
 
     static String beString = "";
