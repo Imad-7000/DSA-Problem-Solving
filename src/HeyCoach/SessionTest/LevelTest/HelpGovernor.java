@@ -36,7 +36,10 @@ package HeyCoach.SessionTest.LevelTest;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 public class HelpGovernor {
 
@@ -59,5 +62,25 @@ public class HelpGovernor {
             count = 0;
         }
         return finalList;
+    }
+
+    public static List<Integer> findCurrencyv2(List<Integer> votes){
+        List<Integer> list = new ArrayList<>();
+
+        HashMap<Integer,Integer> hash = new HashMap<>();
+
+        for(int i = 0; i < votes.size(); i++){
+            hash.put(votes.get(i), hash.getOrDefault(votes.get(i), 0) + 1);
+        }
+
+        Iterator<Map.Entry<Integer,Integer>> itr = hash.entrySet().iterator(); 
+
+        while (itr.hasNext()) {
+            Map.Entry<Integer,Integer> entry = itr.next(); 
+            if(entry.getValue() > 1)
+                list.add(entry.getKey());
+        }
+        Collections.sort(list);
+        return list;
     }
 }

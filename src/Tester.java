@@ -1,10 +1,11 @@
 import LinkedList.ReverseLinkedList;
+import Recursion.Backtracking.FairDistOfCookies;
 import Recursion.DP.KnapsackTemplate.BestTimeToBuyAndSell;
 
 public class Tester {
 
     public static void main(String[] args) {
-    //     int[] nums = new int[]{5,5};
+         int[] nums = new int[]{5,5,10};
     //    System.out.println(Recursion.DP.KnapsackTemplate.PartitionEqualSum.canPartition(nums));
         // String s1 = "catsandog";
         // ArrayList<String> list = new ArrayList<>();
@@ -30,6 +31,8 @@ public class Tester {
         //Recursion.DP.LCSTemplate.LCS.lcsMain(s1, s2);
         //System.out.println(Recursion.DP.LCSTemplate.LongestCommonSubstring.lcs(s1, s2));
 
-        System.out.println(1/2);
+       FairDistOfCookies fairDistOfCookies = new FairDistOfCookies();
+
+       System.out.println(fairDistOfCookies.distributeCookies(nums, 2));
     }
 }
