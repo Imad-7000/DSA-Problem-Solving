@@ -1,0 +1,10 @@
+A new template was found, where the idea is you need to distribute or create k subarray from an array in such a way
+that the difference is minimum. 
+Then you need to return the maximum of the values of k distributions which will be the minimum time.
+
+
+The problems on leetcode of this template.
+
+
+2305. Fair Distribution of Cookies - https://leetcode.com/problems/fair-distribution-of-cookies/description/
+1723. Find Minimum Time to Finish All Jobs - https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs/
