@@ -30,7 +30,6 @@ public class Tester {
         //Recursion.DP.LCSTemplate.LCS.lcsMain(s1, s2);
         //System.out.println(Recursion.DP.LCSTemplate.LongestCommonSubstring.lcs(s1, s2));
 
-        int[] arr = new int[]{7,1,5,3,6,4};
-        System.out.println(BestTimeToBuyAndSell.maxProfit(arr));
+        System.out.println(1/2);
     }
 }
