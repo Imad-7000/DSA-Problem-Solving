@@ -1,6 +1,4 @@
-import LinkedList.ReverseLinkedList;
-import Recursion.Backtracking.FairDistOfCookies;
-import Recursion.DP.KnapsackTemplate.BestTimeToBuyAndSell;
+import Strings.ValidPalindrome;
 
 public class Tester {
 
@@ -30,9 +28,9 @@ public class Tester {
         // System.out.println(val);
         //Recursion.DP.LCSTemplate.LCS.lcsMain(s1, s2);
         //System.out.println(Recursion.DP.LCSTemplate.LongestCommonSubstring.lcs(s1, s2));
+        String s = "A man, a plan, a canal: Panama";
+        ValidPalindrome validPalindrome =new ValidPalindrome();
 
-       FairDistOfCookies fairDistOfCookies = new FairDistOfCookies();
-
-       System.out.println(fairDistOfCookies.distributeCookies(nums, 2));
+        System.out.println(validPalindrome.isPalindrome(s));
     }
 }

@@ -32,7 +32,7 @@ Constraints:
  * 
  * 
  * 
- * INTUITION: This code will fail on Memory Exceeded error at n = 10000
+ * INTUITION: This code will fail on Memory Exceeded error at n = 10000 for DP
  * Hence this can be solved by Greedy Method as well
  */
 
