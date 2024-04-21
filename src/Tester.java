@@ -1,3 +1,4 @@
+import HeyCoach.SessionTest.LevelTest.BoardFilling;
 import Strings.ValidPalindrome;
 
 public class Tester {
@@ -28,9 +29,7 @@ public class Tester {
         // System.out.println(val);
         //Recursion.DP.LCSTemplate.LCS.lcsMain(s1, s2);
         //System.out.println(Recursion.DP.LCSTemplate.LongestCommonSubstring.lcs(s1, s2));
-        String s = "A man, a plan, a canal: Panama";
-        ValidPalindrome validPalindrome =new ValidPalindrome();
-
-        System.out.println(validPalindrome.isPalindrome(s));
+        BoardFilling boardFilling = new BoardFilling();
+        System.out.println(boardFilling.board(3, 3));    
     }
 }
