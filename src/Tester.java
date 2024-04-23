@@ -1,3 +1,6 @@
+import java.util.Vector;
+
+import HeyCoach.SessionTest.GoldRush;
 import HeyCoach.SessionTest.LevelTest.BoardFilling;
 import Strings.ValidPalindrome;
 
@@ -29,7 +32,16 @@ public class Tester {
         // System.out.println(val);
         //Recursion.DP.LCSTemplate.LCS.lcsMain(s1, s2);
         //System.out.println(Recursion.DP.LCSTemplate.LongestCommonSubstring.lcs(s1, s2));
-        BoardFilling boardFilling = new BoardFilling();
-        System.out.println(boardFilling.board(3, 3));    
+        GoldRush goldRush = new GoldRush();
+        Vector<Integer> vector = new Vector<>();
+        vector.add(3);
+        vector.add(1);
+        vector.add(6);
+        vector.add(6);
+        vector.add(3);
+        vector.add(6);
+
+        int[] num = new int[]{3,1,6,6,3,6};
+        System.out.println(goldRush.goldRush(num));
     }
 }
