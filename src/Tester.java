@@ -1,7 +1,9 @@
+import java.util.List;
 import java.util.Vector;
 
 import HeyCoach.SessionTest.GoldRush;
 import HeyCoach.SessionTest.LevelTest.BoardFilling;
+import Strings.GroupAnagrams;
 import Strings.ValidPalindrome;
 
 public class Tester {
@@ -32,16 +34,15 @@ public class Tester {
         // System.out.println(val);
         //Recursion.DP.LCSTemplate.LCS.lcsMain(s1, s2);
         //System.out.println(Recursion.DP.LCSTemplate.LongestCommonSubstring.lcs(s1, s2));
-        GoldRush goldRush = new GoldRush();
-        Vector<Integer> vector = new Vector<>();
-        vector.add(3);
-        vector.add(1);
-        vector.add(6);
-        vector.add(6);
-        vector.add(3);
-        vector.add(6);
+        String[] str = new String[]{"atn","eat", "tea", "tan", "ate", "nat", "bat"};
+        GroupAnagrams groupAnagrams = new GroupAnagrams();
+        List<List<String>> li = groupAnagrams.groupAnagrams(str);
 
-        int[] num = new int[]{3,1,6,6,3,6};
-        System.out.println(goldRush.goldRush(num));
-    }
+        for(int i = 0; i <li.size();i++){
+          for(int j = 0; j < li.get(i).size(); j++){
+            System.out.print(li.get(i).get(j) + "   ");
+          }
+          System.out.println();
+        }
+      }
 }
