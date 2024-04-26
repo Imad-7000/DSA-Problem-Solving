@@ -58,6 +58,9 @@ public class BestTimeToBuyAndSell {
             return memo[n][i];
         int ans = 0;
 
+        if(prices[n] > prices[i])
+            return 0;
+
         if(prices[n] < prices[i])
             ans = prices[i] - prices[n];
         
