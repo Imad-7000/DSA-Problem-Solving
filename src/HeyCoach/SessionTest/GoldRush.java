@@ -48,36 +48,18 @@ Output:
 Constraints:
 1 <= n <= 10^5 (Number of gold nuggets in your pile)
 1 <= nums[i] <= 10^7 (Individual nugget value)
+
+
+
+INTUITION : THIS should be done with Heaps or Priority Queue
  */
 
 package HeyCoach.SessionTest;
 
-import java.util.Arrays;
 
 public class GoldRush {
-    public int min = Integer.MAX_VALUE;
     public int goldRush(int[] nums){
-        int current = Arrays.stream(nums).sum();
-        int target = current / 2;
-         goldRush(nums, target, current, nums.length - 1);
-         return min;
+      return 0;
     }
 
-    public int goldRush(int[] nums, int target, int current, int idx){
-        if(current == target)
-            return 1;
-        if(idx < 0)
-            return 0;
-        if(nums[idx] == 0)
-            return 0;
-        int[] temp = nums;
-        temp[idx] = temp[idx]/2;
-        int sum = Arrays.stream(temp).sum();
-        int pick = 1 + goldRush(temp, target, sum, idx);
-        int skip = 1+ goldRush(nums, target, current,idx - 1);
-        int val = Math.max(pick, skip);
-        min = Math.min(min,val);
-        return val;
-
-    }
 }
