@@ -72,4 +72,19 @@ public class CreateGraph {
         bfsa.bfs_list(adj_list, 0);
         
     }
+
+    public boolean pathExists(int src, int des){
+        ExistsPathBetweenTwoNodes existsPathBetweenTwoNodes = new ExistsPathBetweenTwoNodes();
+        return existsPathBetweenTwoNodes.path_exists(adj_list, src, des);
+    }
+
+    public List<Integer> findPath(int src, int des){
+        ExistsPathBetweenTwoNodes existsPathBetweenTwoNodes = new ExistsPathBetweenTwoNodes();
+        return existsPathBetweenTwoNodes.get_path(adj_list, src, des);
+    }
+
+    public List<Integer> get_path_BFS(int src, int des){
+        ExistsPathBetweenTwoNodes existsPathBetweenTwoNodes = new ExistsPathBetweenTwoNodes();
+        return existsPathBetweenTwoNodes.path_BFS(adj_list, src, des);
+    }
 }
