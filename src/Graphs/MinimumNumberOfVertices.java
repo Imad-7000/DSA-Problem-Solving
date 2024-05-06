@@ -39,7 +39,7 @@ edges[i].length == 2
 All pairs (fromi, toi) are distinct.
  * 
  * 
- * NOTES
+ * NOTES - INTUITION *******
  * This is based on a concept of Indegree and Outdegree of edges.
  * If any vertex has edges coming into it, it is reachable from somewhere
  * If a vertex has no incoming , only outoging edges, then it is not reachable from anywhere, hence part of ans
