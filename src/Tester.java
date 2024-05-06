@@ -2,6 +2,7 @@ import java.util.*;
 
 import Graphs.MinimumNumberOfVertices;
 import Graphs.NumberOfProvinces;
+import Recursion.DP.CountandSay;
 
 public class Tester {
 
@@ -39,9 +40,9 @@ public class Tester {
         list.add(temp);
         temp = new ArrayList<>(); 
 
-        MinimumNumberOfVertices min = new MinimumNumberOfVertices();
-        temp = min.findSmallestSetOfVertices(6, list);
-        
+        CountandSay countandSay = new CountandSay();
+        System.out.println(countandSay.countAndSay(4));
+
     }    
 
 }
