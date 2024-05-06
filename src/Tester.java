@@ -4,6 +4,7 @@ import Graphs.MinimumNumberOfVertices;
 import Graphs.NumberOfProvinces;
 import LinkedList.SplitlinkedListInParts;
 import Recursion.DP.CountandSay;
+import Recursion.DP.KnapsackTemplate.SubArrayWithKdifferentIntegers;
 
 public class Tester {
 
@@ -44,9 +45,9 @@ public class Tester {
         // CountandSay countandSay = new CountandSay();
         // System.out.println(countandSay.countAndSay(4));
         
-
-        SplitlinkedListInParts split = new SplitlinkedListInParts();
-        split.helper();
+        int[] nums = new int[]{1,2,1,2,3};
+        SubArrayWithKdifferentIntegers sub = new SubArrayWithKdifferentIntegers();
+        System.out.println(sub.subarraysWithKDistinct(nums, 2));
     }    
 
 }

@@ -1,3 +1,4 @@
+package Arrays;
 /*
  * 
  * 
@@ -50,7 +51,7 @@ public class SetMatrixZeros {
     public static void setZeroes(int[][] matrix) {
         List<List<Integer>> zeroPos = new ArrayList<>();
         for(int i = 0; i < matrix.length; i++){
-            for(int j = 0 ; j < matrix.length; j++){
+            for(int j = 0 ; j < matrix[i].length; j++){
                 if(matrix[i][j] == 0){
                     List<Integer> temp = new ArrayList<>();
                     temp.add(i);
