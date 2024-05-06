@@ -2,6 +2,7 @@ import java.util.*;
 
 import Graphs.MinimumNumberOfVertices;
 import Graphs.NumberOfProvinces;
+import LinkedList.SplitlinkedListInParts;
 import Recursion.DP.CountandSay;
 
 public class Tester {
@@ -40,9 +41,12 @@ public class Tester {
         list.add(temp);
         temp = new ArrayList<>(); 
 
-        CountandSay countandSay = new CountandSay();
-        System.out.println(countandSay.countAndSay(4));
+        // CountandSay countandSay = new CountandSay();
+        // System.out.println(countandSay.countAndSay(4));
+        
 
+        SplitlinkedListInParts split = new SplitlinkedListInParts();
+        split.helper();
     }    
 
 }

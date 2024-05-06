@@ -43,7 +43,7 @@ public class MergeSortedList {
 
         while(head != null && list2 != null){
             if(head.val < list2.val){
-                ListNode temp = new ListNode(list2.val, null)
+                ListNode temp = new ListNode(list2.val, null);
                 temp.next = head.next;
                 head.next = temp;
                 head = head.next;
