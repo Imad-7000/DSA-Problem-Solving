@@ -34,14 +34,17 @@ package Recursion.DP.KnapsackTemplate;
 import java.util.HashSet;
 
 public class SubArrayWithKdifferentIntegers {
+    boolean[] done;
     public int subarraysWithKDistinct(int[] nums, int k) {
+        done = new boolean[nums.length];
         subArray(nums, k, new HashSet<>(), nums.length - 1);
         return count;
     }
     int count  = 0;
     public void subArray(int[] nums, int k, HashSet<Integer> seen, int i){
         if( i < 0 )
-            return ;    
+            return ;
+      
         seen.add(nums[i]);
         if(seen.size() > k)
             return;

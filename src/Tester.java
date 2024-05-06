@@ -2,6 +2,7 @@ import java.util.*;
 
 import Graphs.MinimumNumberOfVertices;
 import Graphs.NumberOfProvinces;
+import Graphs.WordSearch;
 import LinkedList.SplitlinkedListInParts;
 import Recursion.DP.CountandSay;
 import Recursion.DP.KnapsackTemplate.SubArrayWithKdifferentIntegers;
@@ -42,12 +43,13 @@ public class Tester {
         list.add(temp);
         temp = new ArrayList<>(); 
 
-        // CountandSay countandSay = new CountandSay();
-        // System.out.println(countandSay.countAndSay(4));
-        
-        int[] nums = new int[]{1,2,1,2,3};
-        SubArrayWithKdifferentIntegers sub = new SubArrayWithKdifferentIntegers();
-        System.out.println(sub.subarraysWithKDistinct(nums, 2));
+        char[][] board = new char[3][4];
+        board[0] = new char[]{'A','B','C','E'};
+        board[1] = new char[]{'S','F','E','S'};
+        board[2] = new char[]{'A','D','E','E'};
+
+        WordSearch wordSearch = new WordSearch();
+        System.out.println(wordSearch.exist(board, "ABCESEEEFS"));
     }    
 
 }
