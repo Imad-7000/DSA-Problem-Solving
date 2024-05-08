@@ -32,11 +32,44 @@ Constraints:
 prerequisites[i].length == 2
 0 <= ai, bi < numCourses
 All the pairs prerequisites[i] are unique.
+
+
+INTUITION : DIRECTED GRAPH - Check for a cycle
  */
 package Graphs;
-
+import java.util.*;
 public class CourseSchedule {
     public boolean canFinish(int numCourses, int[][] prerequisites) {
-        
+        List<List<Integer>> graph = new ArrayList<>();
+        for(int i = 0; i< numCourses;i++)
+            graph.add(new ArrayList<>());
+        for(int i = 0 ; i < prerequisites.length; i++){
+            graph.get(prerequisites[i][1]).add(prerequisites[i][0]);
+        }
+
+        boolean[] visited = new boolean[graph.size()];
+        boolean[] rec_stack = new boolean[graph.size()];
+
+        for(int i = 0; i < graph.size(); i++){
+            if(!visited[i]){
+                if(has_cycle(graph, visited, rec_stack, i))
+                    return false;
+            }
+        }
+        return true;
+    }
+
+    public boolean has_cycle(List<List<Integer>> graph, boolean[] visited, boolean[] rec_stack, int src){
+        visited[src] = true;
+        rec_stack[src] = true;
+
+        for(int v : graph.get(src)){
+            if(!visited[v] && has_cycle(graph, visited, rec_stack, v))
+                return true;
+            else if(rec_stack[v])
+                return true;
+        }
+        rec_stack[src] = false;
+        return false;
     }
 }
