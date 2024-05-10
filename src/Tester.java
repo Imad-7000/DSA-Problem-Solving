@@ -1,5 +1,6 @@
 import java.util.*;
 
+import Arrays.Candy;
 import Graphs.MinimumNumberOfVertices;
 import Graphs.NumberOfProvinces;
 import Graphs.WordSearch;
@@ -48,8 +49,12 @@ public class Tester {
         board[1] = new char[]{'S','F','E','S'};
         board[2] = new char[]{'A','D','E','E'};
 
-        WordSearch wordSearch = new WordSearch();
-        System.out.println(wordSearch.exist(board, "ABCESEEEFS"));
+        // WordSearch wordSearch = new WordSearch();
+        // System.out.println(wordSearch.exist(board, "ABCESEEEFS"));
+
+        int[] num = new int[]{1,2,3,5,4,3,2,1,4,3,2,1,3,2,1,1,2,3,4};
+        Candy candy = new Candy();
+        System.out.println(candy.candy(num));
     }    
 
 }
