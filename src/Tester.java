@@ -1,6 +1,7 @@
 import java.util.*;
 
 import Arrays.Candy;
+import Graphs.FindEventualSafeStates;
 import Graphs.MinimumNumberOfVertices;
 import Graphs.NumberOfProvinces;
 import Graphs.WordSearch;
@@ -11,12 +12,17 @@ import Recursion.DP.KnapsackTemplate.SubArrayWithKdifferentIntegers;
 public class Tester {
 
     public static void main(String[] args) {
-        // int[][] graph = new int[4][];
-        // graph[0] = new int[]{1,0,0,1};
-        // graph[1] = new int[]{0,1,1,0};
-        // graph[2] = new int[]{0,1,1,1};
-        // graph[3] = new int[]{1,0,1,1};
+         int[][] graph = new int[7][];
+         graph[0] = new int[]{1,2};
+         graph[1] = new int[]{2,3};
+         graph[2] = new int[]{5};
+         graph[3] = new int[]{0};
+         graph[4] = new int[]{5};
+         graph[5] = new int[]{};
+         graph[6] = new int[]{};
 
+        FindEventualSafeStates find = new FindEventualSafeStates();
+        find.eventualSafeNodes(graph);
         // NumberOfProvinces num = new NumberOfProvinces();
 
         // System.out.println(num.findCircleNum(graph));
@@ -52,9 +58,9 @@ public class Tester {
         // WordSearch wordSearch = new WordSearch();
         // System.out.println(wordSearch.exist(board, "ABCESEEEFS"));
 
-        int[] num = new int[]{1,2,3,5,4,3,2,1,4,3,2,1,3,2,1,1,2,3,4};
-        Candy candy = new Candy();
-        System.out.println(candy.candy(num));
+        // int[] num = new int[]{1,2,3,5,4,3,2,1,4,3,2,1,3,2,1,1,2,3,4};
+        // Candy candy = new Candy();
+        // System.out.println(candy.candy(num));
     }    
 
 }
