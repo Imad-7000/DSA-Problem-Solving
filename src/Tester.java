@@ -6,6 +6,7 @@ import Graphs.MinimumNumberOfVertices;
 import Graphs.NumberOfProvinces;
 import Graphs.WordSearch;
 import LinkedList.SplitlinkedListInParts;
+import Recursion.ReverseInvert;
 import Recursion.DP.CountandSay;
 import Recursion.DP.MinWhiteTiles;
 import Recursion.DP.KnapsackTemplate.SubArrayWithKdifferentIntegers;
@@ -64,9 +65,8 @@ public class Tester {
         // Candy candy = new Candy();
         // System.out.println(candy.candy(num));
 
-        String floor = "1011";
-        MinWhiteTiles minWhiteTiles = new MinWhiteTiles();
-        System.out.println(minWhiteTiles.minimumWhiteTiles(floor, 1, 1));
+        ReverseInvert reverseInvert = new ReverseInvert();
+        System.out.println(reverseInvert.findKthBit(4, 12));
     }    
 
 }

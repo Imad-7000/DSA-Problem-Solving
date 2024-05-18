@@ -41,33 +41,40 @@ floor[i] is either '0' or '1'.
 package Recursion.DP;
 
 public class MinWhiteTiles {
+    int[][] memo;
     public int minimumWhiteTiles(String floor, int numCarpets, int carpetLen) {
-        return min(floor, numCarpets, carpetLen,0,0);
+        memo = new int[numCarpets + 1][floor.length() + 1];
+        for(int i = 0 ; i < memo.length; i++){
+            for(int j = 0; j < memo[i].length; j++){
+                memo[i][j] = -1;
+            }
+        }
+        return min(floor, numCarpets, carpetLen,0);
     }
 
-    public int min(String floor, int numCarpets, int carpetLen, int i, int w){
-        int temp = w;
-        if(i + carpetLen > floor.length())
-            return 100000;
+    public int min(String floor, int numCarpets, int carpetLen, int i){
+        if(i >= floor.length())
+            return 0;
+        if(memo[numCarpets][i] != -1)
+            return memo[numCarpets][i];
         if(numCarpets == 0){
-           int val = 0;
-           for(int j = i; j < floor.length(); j++){
-            if(floor.charAt(j) == '1')
-                val++;
-           }
-           return val;
+            int white = 0;
+            for(int j = i; j < floor.length(); j++){
+                if(floor.charAt(j) == '1')
+                    white++;
+            }
+            memo[numCarpets][i] = white;
+            return  memo[numCarpets][i];
         }
-        int white = 0;
-        for(int j = i + carpetLen; j < floor.length(); j++){
-            if(floor.charAt(j) == '1')
-                white++;
+        else{
+            if(floor.charAt(i) == '0')
+                return memo[numCarpets][i] = min(floor, numCarpets, carpetLen, i + 1);
+            
+            int skip = 1 + min(floor, numCarpets, carpetLen, i + 1);
+            int pick = min(floor, numCarpets - 1, carpetLen, i+ carpetLen);
+
+            return memo[numCarpets][i] = Math.min(skip,pick);
         }
 
-        white += w;
-        if(floor.charAt(i) == '1')
-            w++;
-        int a1 = min(floor, numCarpets, carpetLen, i + 1, w);
-        int a2 = min(floor, numCarpets - 1, carpetLen, i + 1, temp);
-        return Math.max(white, Math.min(a1,a2));
     }
 }
