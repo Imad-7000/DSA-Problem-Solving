@@ -7,6 +7,7 @@ import Graphs.NumberOfProvinces;
 import Graphs.WordSearch;
 import LinkedList.SplitlinkedListInParts;
 import Recursion.DP.CountandSay;
+import Recursion.DP.MinWhiteTiles;
 import Recursion.DP.KnapsackTemplate.SubArrayWithKdifferentIntegers;
 import Recursion.DP.LCSTemplate.IsSubsequence;
 
@@ -63,12 +64,9 @@ public class Tester {
         // Candy candy = new Candy();
         // System.out.println(candy.candy(num));
 
-
-        String s = "abc";
-        String t = "ahbgdc";
-
-        IsSubsequence isSubsequence = new IsSubsequence();
-        System.out.println(isSubsequence.isSubsequence(s, t));
+        String floor = "1011";
+        MinWhiteTiles minWhiteTiles = new MinWhiteTiles();
+        System.out.println(minWhiteTiles.minimumWhiteTiles(floor, 1, 1));
     }    
 
 }

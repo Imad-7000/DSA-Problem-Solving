@@ -33,7 +33,13 @@ subsequence. In this scenario, how would you change your code?
 package Recursion.DP.LCSTemplate;
 
 public class IsSubsequence {
+    int[][] memo;
     public boolean isSubsequence(String s, String t) {
+        memo = new int[s.length() + 1][t.length() + 1];
+        for(int i = 0 ; i < memo.length; i++){
+            for(int j = 0 ; j < memo[i].length; j++)
+                memo[i][j] = -1;
+        }
         int val = isSubsequence(s.length() - 1,t.length() - 1, s, t);
         if(val == s.length())
             return true;
@@ -43,9 +49,15 @@ public class IsSubsequence {
     public int isSubsequence(int m, int n, String s, String t){
         if(m == 0 || n == 0)
             return 0;
+        if(memo[m][n] != -1)
+            return memo[m][n];
+        int ans = 0;
         if(s.charAt(m) == t.charAt(n))
-            return 1 + isSubsequence(m - 1,n - 1,s, t);
-        return Math.max(isSubsequence(m - 1, n, s, t), isSubsequence(m, n - 1, s, t));
+            ans = 1 + isSubsequence(m - 1,n - 1,s, t);
+        else
+            ans = Math.max(isSubsequence(m - 1, n, s, t), isSubsequence(m, n - 1, s, t));
+        memo[m][n] = ans;
+        return ans;
     }
 
 }

@@ -47,7 +47,7 @@ public class NumberOfGoodWaysToSplit {
         for(int i = 0 ; i < s.length(); i++){
             right.put(s.charAt(i), right.getOrDefault(s.charAt(i), 0) + 1);
         }
-
+        numberOfGoodsplits(left, right, 0, s);
         return goodSplits;
     }
 
