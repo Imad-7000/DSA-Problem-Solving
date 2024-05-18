@@ -8,6 +8,7 @@ import Graphs.WordSearch;
 import LinkedList.SplitlinkedListInParts;
 import Recursion.DP.CountandSay;
 import Recursion.DP.KnapsackTemplate.SubArrayWithKdifferentIntegers;
+import Recursion.DP.LCSTemplate.IsSubsequence;
 
 public class Tester {
 
@@ -21,8 +22,8 @@ public class Tester {
          graph[5] = new int[]{};
          graph[6] = new int[]{};
 
-        FindEventualSafeStates find = new FindEventualSafeStates();
-        find.eventualSafeNodes(graph);
+        // FindEventualSafeStates find = new FindEventualSafeStates();
+        // find.eventualSafeNodes(graph);
         // NumberOfProvinces num = new NumberOfProvinces();
 
         // System.out.println(num.findCircleNum(graph));
@@ -61,6 +62,13 @@ public class Tester {
         // int[] num = new int[]{1,2,3,5,4,3,2,1,4,3,2,1,3,2,1,1,2,3,4};
         // Candy candy = new Candy();
         // System.out.println(candy.candy(num));
+
+
+        String s = "abc";
+        String t = "ahbgdc";
+
+        IsSubsequence isSubsequence = new IsSubsequence();
+        System.out.println(isSubsequence.isSubsequence(s, t));
     }    
 
 }
