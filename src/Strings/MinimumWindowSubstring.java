@@ -16,8 +16,8 @@ public class MinimumWindowSubstring {
     public static String minimumWindowSubstring(String s, String t){
         HashMap<Character, Integer> hash = new HashMap<>();
         for(int i = 0; i < t.length(); i++){
-            int count = hash.getOrDefault(s.charAt(i), 0) + 1;
-            hash.put(s.charAt(i), count);
+            int count = hash.getOrDefault(t.charAt(i), 0) + 1;
+            hash.put(t.charAt(i), count);
         }
         
         String mString = "";
@@ -47,10 +47,12 @@ public class MinimumWindowSubstring {
                             else
                                 seen.remove(s.charAt(i));
                         }
+                        if(s.substring(i, j + 1).length() < mString.length())
+                         mString = s.substring(i,j+1);
                         i++;
                     }
-                    while(!hash.containsKey(s.charAt(i)))
-                        i++;
+                     while(!hash.containsKey(s.charAt(i)))
+                         i++;
                 }
             }
             j++;

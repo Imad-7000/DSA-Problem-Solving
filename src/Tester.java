@@ -11,6 +11,7 @@ import Recursion.DP.CountandSay;
 import Recursion.DP.MinWhiteTiles;
 import Recursion.DP.KnapsackTemplate.SubArrayWithKdifferentIntegers;
 import Recursion.DP.LCSTemplate.IsSubsequence;
+import Strings.MinimumWindowSubstring;
 
 public class Tester {
 
@@ -64,11 +65,10 @@ public class Tester {
         // int[] num = new int[]{1,2,3,5,4,3,2,1,4,3,2,1,3,2,1,1,2,3,4};
         // Candy candy = new Candy();
         // System.out.println(candy.candy(num));
-        List<Integer> list1=  new ArrayList<>();
-        list1.add(5);
-        list1.add(3);
-        list1.add(8);
-        
+
+        MinimumWindowSubstring minw = new MinimumWindowSubstring();
+        System.out.println(minw.minimumWindowSubstring("ADOBECODEBANC", "ABC"));
+   
     }    
 
 }
