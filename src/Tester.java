@@ -1,25 +1,14 @@
 import java.util.*;
 
-import Graphs.ConnectedComponents;
-
+import HeyCoach.SessionTest.LevelTest.UniqueSubsequence;
 
 public class Tester {
 
     public static void main(String[] args) {
-         int[][] graph = new int[4][];
-         graph[0] = new int[]{0,1};
-         graph[1] = new int[]{0,2};
-         graph[2] = new int[]{1,2};
-         graph[3] = new int[]{3,4};
-
-
-        ConnectedComponents connectedComponents = new ConnectedComponents();
-        System.out.println(connectedComponents.countCompleteComponents(6, graph));
-        // FindEventualSafeStates find = new FindEventualSafeStates();
-        // find.eventualSafeNodes(graph);
-        // NumberOfProvinces num = new NumberOfProvinces();
-
-        // System.out.println(num.findCircleNum(graph));
+      
+        String s = "abc";
+        UniqueSubsequence u = new UniqueSubsequence();
+        System.out.println(u.distinctSubseqII(s));
 
         List<List<Integer>> list = new ArrayList<>();
         List<Integer> temp = new ArrayList<>();
