@@ -1,5 +1,6 @@
 import java.util.*;
 
+import Graphs.CityWithSmallestNeighbours;
 import HeyCoach.SessionTest.LevelTest.UniqueSubsequence;
 import Recursion.DP.GetMax;
 
@@ -7,32 +8,14 @@ public class Tester {
 
     public static void main(String[] args) {
       
-        GetMax g = new GetMax();
-        System.out.println(g.getMaximumGenerated(4));
+       int[][] egdes = new int[4][];
+       egdes[0] = new int[]{0,1,3};
+       egdes[1] = new int[]{1,2,1};
+       egdes[2] = new int[]{1,3,4};
+       egdes[3] = new int[]{2,3,1};
 
-        List<List<Integer>> list = new ArrayList<>();
-        List<Integer> temp = new ArrayList<>();
-        temp.add(0);
-        temp.add(1);
-        list.add(temp);
-        temp = new ArrayList<>(); 
-        temp.add(0);
-        temp.add(2);
-        list.add(temp);
-        temp = new ArrayList<>(); 
-        temp.add(2);
-        temp.add(5);
-        list.add(temp);
-        temp = new ArrayList<>(); 
-        temp.add(3);
-        temp.add(4);
-        list.add(temp);
-        temp = new ArrayList<>(); 
-        temp.add(4);
-        temp.add(2);
-        list.add(temp);
-        temp = new ArrayList<>(); 
-
+       CityWithSmallestNeighbours city = new CityWithSmallestNeighbours();
+       System.out.println(city.findTheCity(4, egdes, 4));
    
     }    
 
