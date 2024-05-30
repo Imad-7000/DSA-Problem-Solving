@@ -81,12 +81,12 @@ public class CityWithSmallestNeighbours {
             graph.get(edge[1]).add(e1);
         }
 
-        int max = -1;
+        int max = Integer.MAX_VALUE;
         int cur = -1;
 
         for(int i = 0 ; i < n ; i++){
             int val = shortestPath(i, graph, distanceThreshold);
-            if( val < max){
+            if( val <= max){
                 max = Math.min(max,val );
                 cur = i;
             }
@@ -95,33 +95,32 @@ public class CityWithSmallestNeighbours {
     }
 
     public int shortestPath(int src, List<List<Edge>> graph, int t){
-        List<Integer> ans = new ArrayList<>();
+        int cnt = 0;
         int[] dist = new int[graph.size()];
         Arrays.fill(dist, Integer.MAX_VALUE);
         dist[src] = 0;
         PriorityQueue<Edge> pq = new PriorityQueue<>();
         pq.add(new Edge(src, 0));
-        boolean[] visited = new boolean[graph.size()];
         while (!pq.isEmpty()) {
             int u = pq.poll().dest;
-            if(visited[u])
-                continue;
-            visited[u] = true;
-
             for(Edge e: graph.get(u)){
                 int v = e.dest;
                 int w = e.weight;
-
-                if(!visited[v] && w + dist[src] > t)
-                    continue;
                 
-                if(!visited[v] && dist[src] + w < dist[v]){
-                    ans.add(v);
+                if(dist[u] + w <= t && dist[u] + w < dist[v]){
                     dist[v] = dist[u] + w;
                     pq.add(new Edge(v, dist[v]));
                 }
             }
         }
-        return ans.size();
+        for(int j = 0; j<dist.length; j++)
+            {
+                if(dist[j] != Integer.MAX_VALUE)
+                {
+                    cnt++;
+                }
+            }
+
+        return cnt;
     }
 }
