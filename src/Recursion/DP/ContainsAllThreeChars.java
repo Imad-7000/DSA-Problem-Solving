@@ -37,29 +37,8 @@ import java.util.HashSet;
 
 public class ContainsAllThreeChars {
     public int numberOfSubstrings(String s) {
-        int j = s.length() - 1;
-        int i = s.length() - 1;
-        int count = 0;
-        HashSet<Character> hash = new HashSet<>();
-        while(j >= 0){
-            hash.add(s.charAt(j));
-            if(hash.size() == 3){
-                count++;
-                count = count + (s.length() - 1 - i);
-                while(hash.size() == 3){
-                    hash.remove(s.charAt(i));
-                    i--;
-                }
-            }
-            j--;
-        }
-
-        return count;
+   
     }
 
-    public int number(String s, int i){
-        if(i >= s.length() - 3)
-            return 0;
-        if()
-    }
+   
 }
