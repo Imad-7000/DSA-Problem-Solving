@@ -32,17 +32,23 @@ class ListNode{
     ListNode next;
 }
 public class ReverseLinkedList {
+    ListNode a = null;
     public ListNode reverse(ListNode head){
-        ListNode prev = null;  
-        ListNode current = head;
-    
+       ListNode current = head;
+       ListNode prev = current;
+
+       reverse(current, prev);
+       return a;
+    }
+    public void reverse(ListNode current, ListNode prev){
+        if(current == null)
+            return;
         
-        while(current != null) { 
-            ListNode next = current.next; 
-            current.next = prev;
-            prev = current;
-            current = next;
-        }
-       return prev; 
+        reverse(current.next, current);
+
+        if(current.next == null)
+            a = current;
+        
+        current.next = prev;
     }
 }
