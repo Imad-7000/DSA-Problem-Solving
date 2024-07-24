@@ -33,14 +33,11 @@ package Recursion.DP;
 import java.util.Arrays;
 
 public class Grid2 {
-        private int[][] memo;
-    private int[][] grid;
-    private int m, n;
-
-    public int uniquePathsWithObstacles(int[][] obstacleGrid) {
-        m = obstacleGrid.length;
-        n = obstacleGrid[0].length;
-        grid = obstacleGrid;
+    private static int[][] memo;
+    private static int[][] grid;
+      public static int gridPuzzleII(int m, int n, int[][] obstacleGrid) {
+        
+      grid = obstacleGrid;
         memo = new int[m][n];
         
         // Initialize memoization table with -1
@@ -48,10 +45,11 @@ public class Grid2 {
             Arrays.fill(row, -1);
         }
         
-        return uniquePaths(0, 0);
-    }
+        return uniquePaths(0, 0, m, n);
 
-    private int uniquePaths(int i, int j) {
+}
+
+  private static int uniquePaths(int i, int j, int m, int n) {
         // Check if out of bounds
         if (i >= m || j >= n) {
             return 0;
@@ -73,12 +71,11 @@ public class Grid2 {
         }
 
         // Recursive calculation
-        int rightPaths = uniquePaths(i, j + 1);
-        int downPaths = uniquePaths(i + 1, j);
+        int rightPaths = uniquePaths(i, j + 1,m,n);
+        int downPaths = uniquePaths(i + 1, j,m,n);
 
         // Memoize and return the result
         memo[i][j] = rightPaths + downPaths;
         return memo[i][j];
     }
-
 }
