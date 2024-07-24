@@ -38,20 +38,22 @@ import java.util.Vector;
 public class Tunnel {
       boolean calculateTotalTrappedWorkers(Vector<Integer> in, Vector<Integer> out) {
        //Write your code here;
-        Stack<Integer> stack = new Stack<>();
-        int j = 0;
-
+       Stack<Integer> stack = new Stack<>();
+        
+        // Push all elements from 'in' to the stack
         for (int i = 0; i < in.size(); i++) {
             stack.push(in.get(i));
-
-            while (!stack.isEmpty() && stack.peek().equals(out.get(j))) {
-                stack.pop();
-                j++;
-            }
         }
-
-        return stack.isEmpty();
-
-
+        
+        // Check the elements in 'out' and compare with the stack
+        for (int j = 0; j < out.size(); j++) {
+            if (stack.isEmpty() || !stack.peek().equals(out.get(j))) {
+                return false;  // Mismatch found or stack is empty prematurely
+            }
+            stack.pop();  // Pop the matched element
+        }
+        
+        // If we have processed all elements correctly, return true
+        return true;
     }
 }
