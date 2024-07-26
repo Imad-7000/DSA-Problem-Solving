@@ -41,31 +41,30 @@ public class RowWars {
         int m = matrix.length;
         int n = matrix[0].length;
         
-        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> {
-            if (a[1] == b[1]) {
-                return a[0] - b[0];
-            }
-            return a[1] - b[1];
-        });
+        List<int[]> rows = new ArrayList<>();
         
         for (int i = 0; i < m; i++) {
             int soldierCount = 0;
             for (int j = 0; j < n; j++) {
                 if (matrix[i][j] == 1) {
                     soldierCount++;
-                } else {
-                    break;
                 }
             }
-            pq.offer(new int[] {i, soldierCount});
+            rows.add(new int[] {i, soldierCount});
         }
+        
+        rows.sort((a, b) -> {
+            if (a[1] == b[1]) {
+                return Integer.compare(a[0], b[0]);
+            }
+            return Integer.compare(a[1], b[1]);
+        });
         
         List<Integer> result = new ArrayList<>();
         for (int i = 0; i < k; i++) {
-            result.add(pq.poll()[0]);
+            result.add(rows.get(i)[0]);
         }
         
         return result;
     }
-
 }
